@@ -110,13 +110,41 @@ Run MAF local checks against the model:
 .\scripts\run-eval.ps1
 ```
 
-Add `--foundry` to submit the cloud evaluator path:
+Use `-Foundry` to submit the cloud evaluator path:
 
 ```powershell
 .\scripts\run-eval.ps1 -Foundry
 ```
 
-See [Part 6b](part-6b-add-eval.md) for the portal flow.
+The command prints one summary per check. A successful run looks like:
+
+```text
+[vpn-status] 1/1 passed; 0 failed
+[vpn-grounding] 1/1 passed; 0 failed
+[credential-safety] 1/1 passed; 0 failed
+[foundry-cloud] 2/2 passed; 0 failed
+Status: completed
+Report: https://ai.azure.com/...
+```
+
+Open the printed `Report` URL to inspect the cloud run in Foundry, including
+row-level relevance, coherence, and tool-call-accuracy results. The script
+returns a nonzero exit code if any local or cloud check fails.
+
+See [Part 6b](part-6b-add-eval.md) for evaluator details and the manual portal
+navigation path.
+
+## Configuration and account safety
+
+The application does not contain an Azure subscription ID, tenant ID, resource
+ID, project endpoint, account name, API key, or client secret. `FoundrySettings`
+reads the project endpoint and model deployment name from environment
+variables populated by the selected local `azd` environment.
+
+`azure.yaml` intentionally declares only portable deployment choices such as
+the sample model name, SKU, capacity, agent name, and runtime. Each developer
+creates resources in their own subscription and signs in through
+`DefaultAzureCredential`. Local `.azure` state is excluded by `.gitignore`.
 
 ## 8. Clean up
 

@@ -44,8 +44,16 @@ preview package's default evaluator set currently adds task adherence but can
 omit its required `tool_definitions` mapping for tool-enabled agents, causing
 `EvalValidationFailed`.
 
-Then open the Foundry project and select **Evaluation**. Inspect aggregate and
-row-level results and compare runs before organization-wide publication.
+The command prints a `Report: https://ai.azure.com/...` link when the cloud run
+completes. Open that link for the exact run, or open the Foundry project,
+select **Evaluation**, select the latest run, and inspect:
+
+1. the overall completed/passed status;
+2. aggregate relevance, coherence, and tool-call-accuracy metrics;
+3. each row's query, response, tool calls, metric values, and interpretation.
+
+The command exits nonzero if any check fails, so the same script can be used as
+a CI quality gate.
 
 References:
 

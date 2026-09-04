@@ -36,7 +36,7 @@ custom engine agents.
 See [`HANDOFF.md`](HANDOFF.md). Short version:
 
 - ✅ .NET 10 build, deterministic helpdesk tools, file-based grounding, and the 10-row eval dataset are verified offline.
-- ✅ Foundry model, Hosted Agent version 5, multi-turn session retention,
+- ✅ Foundry model, active Hosted Agent version, multi-turn session retention,
   remote tool invocation, and a
   portal-visible cloud evaluation have been verified in a development
   environment.

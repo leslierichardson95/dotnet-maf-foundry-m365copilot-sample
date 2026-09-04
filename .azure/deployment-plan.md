@@ -159,11 +159,11 @@ Validated on 2026-09-03 PDT:
 
 ## Deployment result
 
-- Environment: `ithelper-dev`
-- Resource group: `rg-ithelper-dev`
+- Environment: local `azd` development environment
+- Resource group: generated in the selected developer subscription
 - Region: `northcentralus`
 - Model: `gpt-5.4-mini`, GlobalStandard capacity 50
-- Hosted Agent: `it-helper`, version 5, active
+- Hosted Agent: `it-helper`, active version
 - Remote Responses invocation: completed with `CheckServiceStatus`
 - Evaluation: three local checks passed; the final Foundry cloud run passed
   both test items across relevance, coherence, and tool-call accuracy

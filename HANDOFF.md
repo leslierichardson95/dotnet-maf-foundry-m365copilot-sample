@@ -31,7 +31,7 @@ A minimal **IT helpdesk triage assistant**:
 | 2 sidebar — Foundry Local | 📄 Docs | Not exercised in code |
 | 3 — Grounding (file-based) | ✅ Verified offline | 10 KB articles + in-memory retrieval |
 | 3 alt — Foundry IQ | 📄 Docs | Not exercised |
-| 4 — Hosted Agent deploy | ✅ Verified | Version 5 is active; multi-turn identity reuse and tool-grounded responses pass |
+| 4 — Hosted Agent deploy | ✅ Verified | An active version, multi-turn identity reuse, and tool-grounded responses pass |
 | 5 — M365 Copilot registration | ⚠️ Scaffold | Custom engine agent via Activity protocol + M365 app manifest; sideload untested |
 | 6a — Org-wide publish | 📄 Docs | Requires tenant admin approval flow |
 | 6b — Evaluation | ✅ Verified | Local checks passed and a Foundry cloud evaluation completed and appears in the portal |
