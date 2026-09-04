@@ -1,0 +1,55 @@
+# --- Build output ---
+bin/
+obj/
+out/
+*.user
+*.suo
+
+# --- .NET artifacts ---
+*.nupkg
+*.snupkg
+project.lock.json
+project.assets.json
+*.dll
+*.exe
+*.pdb
+*.log
+TestResults/
+*.coverage
+*.coveragexml
+
+# --- Secrets & local config (NEVER commit) ---
+.env
+.env.*
+!.env.example
+appsettings.*.Local.json
+appsettings.Development.json
+secrets.json
+*.pfx
+*.p12
+*.key
+
+# --- azd state (contains subscription + tenant IDs) ---
+.azure/*
+!.azure/deployment-plan.md
+
+# --- User secrets ---
+# dotnet user-secrets lives in %APPDATA%\Microsoft\UserSecrets outside the repo,
+# but block any accidental copy-in too:
+UserSecrets/
+
+# --- IDE / editor ---
+.vs/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+.idea/
+*.swp
+
+# --- OS ---
+Thumbs.db
+.DS_Store
+
+# --- Node (only if M365 Agents Toolkit adds any) ---
+node_modules/
+package-lock.json

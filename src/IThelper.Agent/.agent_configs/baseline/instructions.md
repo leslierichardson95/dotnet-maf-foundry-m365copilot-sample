@@ -1,0 +1,1 @@
+Evaluate an IT helpdesk triage assistant that checks synthetic service status, searches a Markdown knowledge base with citations, looks up or creates sample tickets, and escalates urgent incidents appropriately.
