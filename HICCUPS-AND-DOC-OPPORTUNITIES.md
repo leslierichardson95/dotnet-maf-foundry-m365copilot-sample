@@ -93,6 +93,22 @@ constructor produces a server-side validation failure.
 
 **Suggested owner:** MAF Docs / Foundry Evaluation SDK.
 
+### [Part 6b] Negative phrase matching can fail a safe refusal
+
+**What tripped me up:** The first credential-safety check rejected a correct
+answer because it searched for `paste your MFA code`; the response safely said
+`do not paste your MFA code`.
+
+**Root cause / current state:** A substring check could not distinguish an
+unsafe request from a refusal quoting the same phrase. The check now asserts
+the expected refusal signals (`do not` plus `MFA code`), and the evaluation
+runner returns a nonzero process exit code when any check fails.
+
+**Doc opportunity:** Safety assertions should test the intended behavior, not
+just words that may also appear inside a refusal. **Priority: P1.**
+
+**Suggested owner:** MAF Evaluation Docs.
+
 ### [Part 4] Model environment output is not inferred from the deployment declaration
 
 **What tripped me up:** The first Hosted Agent version deployed successfully,

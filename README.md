@@ -48,6 +48,7 @@ See [`HANDOFF.md`](HANDOFF.md). Short version:
 - [`HANDOFF.md`](HANDOFF.md) — **read this first** if you're picking this up as a handoff
 - [`BUILD-GUIDE.md`](BUILD-GUIDE.md) — walkthrough-style rebuild recipe
 - [`HICCUPS-AND-DOC-OPPORTUNITIES.md`](HICCUPS-AND-DOC-OPPORTUNITIES.md) — friction log + ready-to-write doc issues
+- [`DotnetFoundryM365CopilotWalkthrough-Outline.md`](docs/reference/DotnetFoundryM365CopilotWalkthrough-Outline.md) — proposed staged Microsoft Learn walkthrough that this sample implements
 - [`docs/QUICKSTART.md`](docs/QUICKSTART.md), [`docs/AUTH-AND-CONFIG.md`](docs/AUTH-AND-CONFIG.md), and per-part docs in [`docs/`](docs/)
 
 ## License
